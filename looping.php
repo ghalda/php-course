@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Latihan 5 (Perulangan)</title>
+    <title>Latihan 5 (looping)</title>
 </head>
 <body>
     <?php
-        // looping FOR => perulangan yg diketahui nilai akhirnya
+        // looping FOR => looping yg diketahui nilai akhirnya
         /*
         for($nilaiawal; $variabel <= $batasan; $variabel++ ){
-            script menampilkan atau melakukan apa sebanyak perulangan yang disetting
+            script menampilkan atau melakukan apa sebanyak looping yang disetting
         }
         */
         // increment (menaik)
         for($i = 1; $i <= 10; $i++) {
-            // menampilkan Hello sebanyak perulangan yg disetting
+            // menampilkan Hello sebanyak looping yg disetting
             echo "Hello - $i <br>";
         }
         echo "<hr>";
@@ -27,11 +27,11 @@
 
         echo "<br>";
 
-        // looping WHILE => perulangan yg tidak diketahui batas akhirnya
+        // looping WHILE => looping yg tidak diketahui batas akhirnya
        /*
         $nilaiawal = 1;
         while($nilaiawal <= batasan){
-            script menampilkan atau melakukan apa sebanyak perulangan yang disetting
+            script menampilkan atau melakukan apa sebanyak looping yang disetting
 
             kondisi
             apakah ++ / --
@@ -47,7 +47,7 @@
             $nilaiawal++;
         }
         echo "<br>";
-        // perulangan FOREACH => biasa dipakai utk perulangan pd tipe data array
+        // looping FOREACH => biasa dipakai utk looping pd tipe data array
         $data1 = [
             'BA0001',
             'BA0002',
@@ -62,7 +62,7 @@
 
         /*
         foreach($variabel as $vr) {
-            lakukan apa yg ingin dilakukan sebanyak perulangan datanya
+            lakukan apa yg ingin dilakukan sebanyak looping datanya
         }
         */
 

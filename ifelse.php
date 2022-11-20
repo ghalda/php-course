@@ -25,7 +25,7 @@
         if($nilai_rata >= 90){
             $keterangan2 = "Excelent!";
           } else if($nilai_rata >= 80 && $nilai_rata <= 89){
-            $keterangan2 = "Good";
+            $keterangan2 = "Good!";
           } else{
               $keterangan2 = "Not Bad!";
           }

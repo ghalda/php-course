@@ -53,37 +53,13 @@
         if (isset($_POST['submit'])) {
             //prepare for variable from input form
             // $variable = $_METHOD['name of input']
+            
+            include 'function.php';
             $username = $_POST['username'];
             $paket = $_POST['paket_hotel'];
             $jumlah = $_POST['jumlah_malam'];
 
-            //function harga hotel
-            function hotelPrice($paket, $jumlah)
-            {
-                if ($paket == "Hotel Amariz") {
-                    $harga = 250000;
-                    $total_harga = $harga * $jumlah;
-                } else if ($paket == "Hotel Butiq") {
-                    $harga = 350000;
-                    $total_harga = $harga * $jumlah;
-                } else if ($paket == "Hotel Wyndem") {
-                    $harga = 225000;
-                    $total_harga = $harga * $jumlah;
-                } else {
-                    $harga = "Error!";
-                    $total_harga = "Error!";
-                }
-
-                $data = array(
-                    'harga' => $harga,
-                    'total_harga' => $total_harga
-                );
-
-                return $data;
-            }
-
-            //
-            $totalan = hotelPrice($paket, $jumlah);
+            $totalan = hotelPrice($username, $paket, $jumlah);
         ?>
 
         <div class="my-3">
@@ -92,12 +68,12 @@
                 <tr>
                     <td>Nama Pelanggan</td>
                     <td>:</td>
-                    <td><?= $username ?></td>
+                    <td><?= $totalan['username'] ?></td>
                 </tr>
                 <tr>
                     <td>Paket Hotel</td>
                     <td>:</td>
-                    <td><?= $paket ?></td>
+                    <td><?= $totalan['paket_hotel'] ?></td>
                 </tr>
                 <tr>
                     <td>Harga Satuan</td>
@@ -107,7 +83,7 @@
                 <tr>
                     <td>Jumlah</td>
                     <td>:</td>
-                    <td><?= $jumlah ?></td>
+                    <td><?= $totalan['jumlah'] ?></td>
                 </tr>
                 <tr>
                     <td>Total Harga</td>

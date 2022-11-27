@@ -22,13 +22,13 @@ function keterangan($nilai_uts, $nilai_uas)
     } else if ($nilai_rata >= 75 && $nilai_rata <= 77.99) {
         $keterangan = "B+";
         $messages = "Good!";
-    }else if ($nilai_rata >= 70 && $nilai_rata <= 74.99) {
+    } else if ($nilai_rata >= 70 && $nilai_rata <= 74.99) {
         $keterangan = "B";
         $messages = "Not Bad!";
-    }else if ($nilai_rata >= 65 && $nilai_rata <= 69.99) {
+    } else if ($nilai_rata >= 65 && $nilai_rata <= 69.99) {
         $keterangan = "B-";
         $messages = "Bad!";
-    }else if ($nilai_rata < 65 ) {
+    } else if ($nilai_rata < 65) {
         $keterangan = "Tidak Lulus Mata Kuliah";
         $messages = "Try Again!";
     } else {
@@ -42,6 +42,34 @@ function keterangan($nilai_uts, $nilai_uas)
         'keterangan' => $keterangan,
         'messages' => $messages
     );
-    
+
+    return $data;
+}
+
+//function harga hotel
+function hotelPrice($username, $paket, $jumlah)
+{
+    if ($paket == "Hotel Amariz") {
+        $harga = 250000;
+        $total_harga = $harga * $jumlah;
+    } else if ($paket == "Hotel Butiq") {
+        $harga = 350000;
+        $total_harga = $harga * $jumlah;
+    } else if ($paket == "Hotel Wyndem") {
+        $harga = 225000;
+        $total_harga = $harga * $jumlah;
+    } else {
+        $harga = "Error!";
+        $total_harga = "Error!";
+    }
+
+    $data = array(
+        'username' => $username,
+        'harga' => $harga,
+        'total_harga' => $total_harga,
+        'paket_hotel' => $paket,
+        'jumlah' => $jumlah
+    );
+
     return $data;
 }

@@ -73,3 +73,4 @@ function hotelPrice($username, $paket, $jumlah)
 
     return $data;
 }
+?>
